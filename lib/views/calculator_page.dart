@@ -45,6 +45,9 @@ class _CalculatorPageState extends State<CalculatorPage> {
         case 'potenciar':
           resultado = _calculator.potenciar(num1, num2);
           break;
+        case 'factorial':
+          resultado = _calculator.factorial(num1); // Solo se debe usar un número para factorial
+          break;
         default:
           resultado = 0;
       }
@@ -187,12 +190,22 @@ class _CalculatorPageState extends State<CalculatorPage> {
               label: 'Dividir',
               onPressed: () => _realizarOperacion('dividir'),
             ),
+          ],
+        ),
+        const SizedBox(height: 12),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            _buildBotonOperacion(
+              icono: Icons.priority_high, // El signo "!" se parece al factorial
+              label: 'Factorial',
+              onPressed: () => _realizarOperacion('factorial'),
+            ),
             _buildBotonOperacion(
               icono: Icons.bolt,
               label: 'Potencia',
               onPressed: () => _realizarOperacion('potenciar'),
             ),
-            const Expanded(child: SizedBox()),
           ],
         ),
       ],

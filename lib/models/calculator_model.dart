@@ -30,4 +30,17 @@ class Calculator {
   double potenciar(double base, double exponente) {
     return pow(base, exponente).toDouble();
   }
+
+  /// Calcula el factorial de un número entero
+  double factorial(double n) {
+    // El factorial solo es para números enteros positivos
+    if (n < 0) throw Exception('No existe factorial de números negativos');
+    if (n != n.roundToDouble()) throw Exception('El número debe ser entero');
+    
+    double resultado = 1;
+    for (int i = 1; i <= n.toInt(); i++) {
+      resultado *= i;
+    }
+    return resultado;
+  }
 }
