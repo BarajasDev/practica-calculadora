@@ -1,3 +1,5 @@
+import 'dart:math';
+
 /// Modelo que contiene las operaciones básicas de una calculadora
 class Calculator {
   /// Suma dos números
@@ -22,5 +24,10 @@ class Calculator {
       throw Exception('No se puede dividir entre cero');
     }
     return a / b;
+  }
+
+  /// Eleva un número (base) a la potencia del exponente
+  double potenciar(double base, double exponente) {
+    return pow(base, exponente).toDouble();
   }
 }
