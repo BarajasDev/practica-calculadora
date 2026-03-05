@@ -42,6 +42,9 @@ class _CalculatorPageState extends State<CalculatorPage> {
         case 'dividir':
           resultado = _calculator.dividir(num1, num2);
           break;
+        case 'potenciar':
+          resultado = _calculator.potenciar(num1, num2);
+          break;
         default:
           resultado = 0;
       }
@@ -184,6 +187,12 @@ class _CalculatorPageState extends State<CalculatorPage> {
               label: 'Dividir',
               onPressed: () => _realizarOperacion('dividir'),
             ),
+            _buildBotonOperacion(
+              icono: Icons.bolt,
+              label: 'Potencia',
+              onPressed: () => _realizarOperacion('potenciar'),
+            ),
+            const Expanded(child: SizedBox()),
           ],
         ),
       ],
