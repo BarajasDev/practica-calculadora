@@ -48,6 +48,9 @@ class _CalculatorPageState extends State<CalculatorPage> {
         case 'factorial':
           resultado = _calculator.factorial(num1); // Solo se debe usar un número para factorial
           break;
+        case 'raiz':
+          resultado = _calculator.raizCuadrada(num1);
+          break;
         default:
           resultado = 0;
       }
@@ -207,6 +210,17 @@ class _CalculatorPageState extends State<CalculatorPage> {
               onPressed: () => _realizarOperacion('potenciar'),
             ),
           ],
+        ),
+        const SizedBox(height: 12), // Separación para el botón final
+
+        // Quitamos el Row para que no se limite a la mitad
+        SizedBox(
+          width: double.infinity, 
+          child: _buildBotonOperacion(
+            icono: Icons.square_foot, // Este icono se parece un poco al símbolo de raíz
+            label: 'Raíz Cuadrada √',
+            onPressed: () => _realizarOperacion('raiz'),
+          ),
         ),
       ],
     );

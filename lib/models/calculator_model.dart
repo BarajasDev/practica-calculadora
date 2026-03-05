@@ -43,4 +43,12 @@ class Calculator {
     }
     return resultado;
   }
+
+  /// Calcula la raíz cuadrada de un número
+  double raizCuadrada(double n) {
+    if (n < 0) {
+      throw Exception('No se puede calcular la raíz de un número negativo');
+    }
+    return sqrt(n);
+  }
 }
