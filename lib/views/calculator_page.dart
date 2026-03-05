@@ -24,8 +24,8 @@ class _CalculatorPageState extends State<CalculatorPage> {
   void _realizarOperacion(String operacion) {
     try {
       // Parsear los números ingresados
-      double num1 = double.parse(_numero1Controller.text);
-      double num2 = double.parse(_numero2Controller.text);
+      double num1 = double.tryParse(_numero1Controller.text) ?? 0.0;
+      double num2 = double.tryParse(_numero2Controller.text) ?? 0.0;
       double resultado;
 
       // Ejecutar la operación correspondiente
