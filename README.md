@@ -1,16 +1,13 @@
-# calculadora
+# Reporte de Práctica: Mejora de mi Calculadora en Flutter
 
-A new Flutter project.
+## 1. ¿Cómo trabajamos?
+Utilicé **Git** para trabajar de forma segura. Creé una rama llamada `dev1` para agregar las funciones de **Potencia, Factorial y Raíz Cuadrada** sin mover la rama principal. Una vez que todo quedó listo y sin errores, uní los cambios a `main`.
 
-## Getting Started
+## 2. Funciones Implementadas
+* **Potencia:** Eleva el número 1 a la potencia del número 2.
+* **Factorial:** Cálculo matemático para el primer número ingresado.
+* **Raíz Cuadrada:** Obtiene la raíz del primer número.
 
-This project is a starting point for a Flutter application.
+## 3. Solución de problemas
+Corregí un error de `FormatException` usando `double.tryParse()` en lugar de `parse`. Esto evita que la app truene si se deja un campo vacío, asignando un `0.0` por defecto. También acomodé los botones en filas de dos y el de raíz a todo lo ancho para que se vea mejor.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
